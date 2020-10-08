@@ -1,0 +1,28 @@
+@startuml
+package "PRESENTACION" {
+[VIEW]
+[CONTROLLERS]
+folder "HUSS"{
+[HUBS]
+}
+folder "Repositorio" {
+[DATA]
+[MODELS]
+}
+[MODELSS]
+folder "SERVICES"{
+[SERVICESS]
+}
+
+}
+database "MySql" {
+[F]
+}
+[HUBS]-->[DATA]
+[VIEW]-->[CONTROLLERS]
+[CONTROLLERS]-->[MODELSS]
+[SERVICESS]-->[HUBS]
+[DATA]--> [MODELS]
+[CONTROLLERS]-->[HUBS]
+[DATA] --> [F]
+@enduml
